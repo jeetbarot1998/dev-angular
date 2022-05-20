@@ -12,20 +12,28 @@ export class JwtInterceptor implements HttpInterceptor {
 
     intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
         // add authorization header with jwt token if available
-        this.currentUser = this.authenticationService.currentUserValue;
-        if (this.currentUser.token){
-            this.token = this.currentUser.token
-        }
-        else{
-            this.token = this.currentUser
-        }
-        // if (currentUser && currentUser.token) {
+        // this.currentUser = this.authenticationService.getToken;
+        this.currentUser = localStorage.getItem('currentUser');
+        // try{
+        //     this.token = this.currentUser.token
+        // }    
+        // catch{
+        //     this.token = this.currentUser
+        // }
+        // if (this.currentUser.token && this.currentUser.token){
+        //     this.token = this.currentUser.token
+        // }
+        // else{
+        //     this.token = this.currentUser
+        // }
+        // if (request['url'] != 'http://localhost:8080/Jwt_Token/key_gen' && request['url'] != 'https://buddiez-backend-api.herokuapp.com/Jwt_Token/key_gen' ) {
+            if(this.currentUser != null){
             request = request.clone({
                 setHeaders: {
-                    Authorization: `${this.token}`
+                    Authorization: `${this.currentUser}`
                 }
             });
-        // }
+        }
 
         return next.handle(request);
     }
