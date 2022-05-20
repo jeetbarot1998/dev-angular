@@ -4,8 +4,8 @@
 
 export const environment = {
     production: false,
-    apiUrl: 'https://weeb-app-test.herokuapp.com'
-    // apiUrl:'http://localhost:5000'
+    apiUrl: 'https://buddiez-backend-api.herokuapp.com/'
+    // apiUrl:'http://localhost:8080'
 };
 
 /*

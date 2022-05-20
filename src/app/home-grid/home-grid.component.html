@@ -1,0 +1,12 @@
+<ag-grid-angular id="Home-Grid"
+    style="width: 500px; height: 150px;"
+    class="ag-theme-alpine"
+    [rowData]="rowData"
+    [columnDefs]="columnDefs"
+    [pagination]="true"
+    (cellClicked)="onCellClicked($event)"
+    (gridReady)="onGridReady($event)"
+    [animateRows]="true"
+    [enableCellTextSelection]="true"
+    rowSelection = "multiple">
+</ag-grid-angular>

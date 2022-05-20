@@ -85,7 +85,8 @@
             "karmaConfig": "karma.conf.js",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "_redirects"
             ],
             "styles": [
               "src/styles.less"
@@ -119,6 +120,7 @@
           }
         }
       }
-    }},
+    }
+  },
   "defaultProject": "angular-8-jwt-authentication-example"
 }

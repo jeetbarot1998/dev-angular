@@ -1,6 +1,9 @@
 ﻿<div class="card mt-4">
-    <h4 class="card-header">You're logged in with Angular 8 & JWT!!</h4>
+    <h4 class="card-header">Hello Admin!</h4>
 </div>
 <div>
-    <h2> {{resultFromApi}} </h2>
+    <ag-grid-angular id="Home-Grid" style="padding-top: 20px;width: 100%; height: 20pc;" class="ag-theme-balham" [rowData]="rowData"
+        [columnDefs]="columnDefs" [pagination]="true" (cellClicked)="onCellClicked($event)" 
+        (gridReady)="onGridReady($event)" [animateRows]="true" [enableCellTextSelection]="true" rowSelection="multiple">
+    </ag-grid-angular>
 </div>
