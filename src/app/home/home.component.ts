@@ -18,11 +18,13 @@ export class HomeComponent {
   
     constructor(private homeService: HomeService) { 
       this.columnDefs = [
-        {headerName:'First Name', field: 'first_name', filter: true, sortable: true, resizable: true, minWidth:300},
-        {headerName:'Last Name', field: 'last_name', filter: true, sortable: true, resizable: true, minWidth:300},
+        {headerName:'Name', field: 'Name', filter: true, sortable: true, resizable: true, minWidth:300},
         {headerName:'Address', field: 'Address', filter: true, sortable: true, resizable: true, minWidth:300},
-        {headerName:'Contact Number', field: 'ContactNumber', filter: true, sortable: true, resizable: true, minWidth:300},
-        // {headerName:'First Name', field: 'first_name', filter: true, sortable: true, resizable: true, minWidth:300},
+        {headerName:'EmailId', field: 'EmailId', filter: true, sortable: true, resizable: true, minWidth:300},
+        {headerName:'Size', field: 'Size', filter: true, sortable: true, resizable: true, minWidth:300},
+        {headerName:'TransactionId', field: 'TransactionId', filter: true, sortable: true, resizable: true, minWidth:300},
+		{headerName:'TimeStamp', field: 'TimeStamp', filter: true, sortable: true, resizable: true, minWidth:300},
+
       ]
     }
   
